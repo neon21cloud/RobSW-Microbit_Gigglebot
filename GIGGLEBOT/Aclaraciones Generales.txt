@@ -1,0 +1,60 @@
+ACLARACIONES ÚTILES PARA UNA MEJOR COMPRENSIÓN Y SEGUIMIENTO DE LOS PROGRAMAS:
+
+
+---------------------------- Aclaraciones generales ------------------------------
+
+· Programas incluidos en la entrega: 
+
+Los programas incluidos están repartidos las siguientes (3) carpetas:
+
+1 - Fase1: Programas (7): gigg_EJ1.py, gigg_EJ2.py, gigg_EJ3.1.py, gigg_EJ3.2.py, gigg_EJ4.py, gigg_EJ5.py, gigg_EJ6.py
+Cada uno corresponde a un ejercicio (en orden) de la Fase 1.
+
+2 - Fase 2: Programas (3), Archivo de texto(1), Video(1): Aclaraciones_Fase2.txt, Demostracion_Fase2.mp4, 
+    FASE2-1-LeeBalizasySecretos.py, FASE2-2-MetayArbitro.py, referee.py (Es el programa del árbitro estandar. Solo tiene un cambio que es el aumento de su capacidad de recepción a length = 128. De no tener esa capcidad ampliada el árbitro no recibirá el mensaje completo enviado por los gigglebots).
+
+3 - Fase 3: Programas (4), Archivo de texto(2), Video(1): Aclaraciones_Fase3.txt, Demostracion_Fase3.mp4, 
+    FASE3-1-CocheJefe.py, FASE3-1-CocheEsclavo.py, FASE3-2-MetayArbitro_AmbosCoches.py, equipo.txt, referee.py (Es el mismo que el incluido en la Fase2)
+
+
+· Dado que los programas de la Fase2 son válidos para una o varias balizas cumplen las condiciones de tanto la parte obligatoria 
+como de la parte opcional de la entrega de la convocatoria extraordinaria.
+
+
+· Prueba de los programas: 
+Por suerte he contado con 2 Gigglebots y 5 Microbits para probar la Fase1-ej6, Fase2 (hasta con 4 balizas) y Fase3 (hasta con 3 balizas).
+
+
+
+· Tanto los programas de la Fase 2 como los programas de la Fase 3 han estado limitados por la memoria máxima del Microbit.
+Esto ha hecho inevitable lo siguiente:
+
+1 -  La rutina completa está dividida en dos programas para cada fase, ambas cumpliendo las mismas funciones:
+     Programa 1: Busca las balizas, recoge los secretos y almacena todo junto al ID de su baliza correspondiente en una matriz.
+     Programa 2: Lleva al/los gigglebots a la meta y le envía la matriz completa al árbitro
+     (Importante tener en cuenta que dado que los programas están separados, se ha metido a mano una matriz completa en el segundo
+     programa a modo de ejemplo del resultado del primer programa)
+
+2 -  En algunos casos no se han podido afinar o completar más los programas, ampliar el numero de balizas que se pueden almacenar,
+     etc.
+
+3 -  Necesidad de activar la opcion de "reducir el código" en los ajustes de Mu-Editor a la hora de compilar.
+     (Esto es esencial, de lo contrario los programas darán error de memoria al compilar)
+
+4 -  Necesidad de usar pilas completamente cargadas en los gigglebots. Como he podido comprobar varias veces, los programas 
+     (aun habiendose cargado correctamente en el microbit) pueden dar error de memoria al encender el gigglebot si las pilas no estan del todo cargadas.
+
+
+· La mayoría de los programas en la entrega dan OSError I2C al cargarlo al Microbit, pero el programa funciona correctamente una vez el Microbit se instala en el Gigglebot.
+
+
+· Interferencias entre las distintas señales de radio han hecho necesaria la implementación de una gran cantidad de 
+condiciones de control. Algunas no son necesarias siempre, pero todas ellas están implementadas porque en en algún momento
+durante las numerosas pruebas realizadas se han dado interferencias en diversas situaciones.
+
+- Un ejemplo llamativo de esta situación es que la cola de la radio está reducida a 1. De esta manera esperaba evitar que mensajes
+  guardados en la cola afectaran al programa. Sin embargo, esto no fue suficiente y ocasionalmente se daba el mismo problema. La solución fue 
+  apagar la radio y encenderla de nuevo antes de su uso en algunas funciones.
+
+
+

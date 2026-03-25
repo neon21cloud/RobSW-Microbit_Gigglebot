@@ -1,0 +1,43 @@
+
+
+------------------------------------ FASE 2 --------------------------------------
+
+Los programas incluidos en la fase dos sirven para localizar una o varias balizas.
+
+· Aclaración importante para FASE2-1-LeeBalizasySecretos.py:
+  
+  Es la primera parte de la Fase2. En ella el gigglebot recoge los secretos de una o varias balizas 
+  y los almacena junto con sus IDs. 
+
+  1 - Cuando detecta una baliza y decide ir a por ella, hace la media de las potencias recibidas y se mueve en consecuencia.
+  Sin embargo, al buscar las balizas ESTAR MÁS CERCA DE ELLAS FISICAMENTE NO NECESARIAMENTE SIGNIFICA TENER MAYOR POTENCIA DE SEÑAL.
+  Es por ello que aunque el movimiento pueda parecer errático en ocasiones, el gigglebot está buscando el punto de la habitación
+  donde la señal es más fuerte.
+
+
+
+· Entendiendo los DISPLAYS:
+
+
+PRIMER PROGRAMA:
+·Se muestra el ID de la baliza que se va a leer
+·Muestra un diamante mientras calcula la media de potencias
+ (Aunque esto lo ralentiza es muy útil para tener un lectura mas estable de potencia)
+·Muestra la potencia media que ha calculado en el sitio donde está
+ (Eso ayuda a entender las decisiones de movimiento que toma)
+·Cuando el coche completa un desplazamiento, se detiene de nuevo para calcular una nueva media de potencias mostrando en cada ocasion el diamante y la potencia calculada
+·Al hablar con la baliza, el gigglebot muestra el secreto
+
+Una vez estan todas las balizas, 
+·Muestra 'Fin:', seguido de la lista completa de IDs y sus secretos, hasta un maximo de 5.
+ Si quedan espacios sin rellenar, se muestran 0s en su lugar
+
+
+SEGUNDO PROGRAMA:
+·Mientras los gigglebots se muevan, se muestra una 'M'
+·Cuando llegan a la meta, muestran una 'Cara Feliz'
+·Tras hablar con el árbitro, el gigglebot muestra el mensaje de confirmación que el árbitro ha enviado
+
+
+
+

@@ -1,0 +1,89 @@
+
+
+------------------------------------ FASE 3 --------------------------------------
+
+El esfuerzo de equipo se realiza con un enfoque de Jefe y Esclavo. Los programas son válidos SOLO para DOS COCHES.
+El Jefe es el único que busca nuevas balizas y las reparte entre los dos coches para buscar secretos.
+El Esclavo se limita a obedecer las ordenes del jefe.
+En esta fase se necesitan al menos 2 Gigglebots y 5 Microbits para localizar hasta 3 balizas.
+
+· Aclaración importante para FASE3-1-CocheJefe.py y FASE3-1-CocheEsclavo.py:
+
+  Dada la limitación de memoria, estos programas solo contemplan la comunicación que tiene lugar entre los dos gigglebots y las
+  balizas y omite las partes de movimiento, aunque esta estructurado de tal manera que de haber más memoria pudiese implementarse el
+  movimiento sin otras modificaciones. (El codigo del movimiento sería esencialmente el mismo que se usaba en la primera parte de la Fase 2).
+
+  Las balizas y gigglebots tienen que estar bastante cerca para poder hablar.
+
+   
+· Aclaración importante para FASE3-2-MetayArbitro_AmbosCoches.py:
+
+  El programa sirve tanto para el Coche-Jefe como el Coche-Esclavo. En este caso los gigglebots si se mueven.
+
+  Es esencialmente el mismo codigo usado en el segundo programa de la Fase 2. Solo varía en que el formato de mensaje a enviar al árbitro es 
+  ligeramente diferente y ya tiene el formato de string final.  El programa lleva a los dos gigglebots a la meta donde entregarán sus secretos al árbitro. 
+
+  
+
+· Entendiendo la ejecución con los DISPLAYS:
+
+
+PRIMER PROGRAMA:
+Ya que no hay suficiente memoria para mover los coches en la Parte 1 de la Fase 3, 
+la ejecución se entiende mejor con displays.
+
+Teniendo en cuenta que el primer ID de Baliza siempre se intenta asignar al esclavo, 
+este es un posible ejemplo de ejecución con displays:
+
+
+
+	Jefe - muestra (por ejemplo): 'IDesc: 144'
+	Indica que le va a asignar al esclavo el ID 144
+
+	Esclavo - muestra: 'ESC: 144' que le acaba de ser asignado
+
+	Cuando el esclavo consigue la baliza muestra:
+	'SEC:elSecreto'
+	Entonces este envía y muestra un aviso 'Ready?', al Jefe,
+
+	Mientras el Jefe está buscando nuevos IDs.
+	- Muestra en pantalla 'ID?' seguido de una 'Cara Confusa' si no lo encuentra
+	- Muestra en pantalla (por ejemplo) 'MiID: 122'
+
+	A continuacion el Jefe intenta leer el secreto de su ID autoasignado
+	Si lo consigue muestra:
+	'SEC:elSecreto'
+
+	En algun momento el jefe escucha al esclavo diciendole 'Ready?'
+	Le contesta 'Ready?' tambien (sin mostrar nada en pantalla) y recibe 
+	el secreto, que si muestra como:
+	'SecEsc:Secreto1'
+
+	El proceso se repite hasta que no hay nuevas balizas o se agotan los intentos. 
+	El Jefe envia y muestra entonces: 'IDesc: 99999'
+
+	El Esclavo muestra una 'Mariposa' mientras espera recibir todas las balizas y secretos
+
+	El Jefe muestra (por ejemplo) 'Enviando: 03:MiGrupo:lcrespo,107:Sec1,103:Sec2,109:Sec3'
+	El Esclavo recibe y muestra '03:MiGrupo:lcrespo,107:Sec1,103:Sec2,109:Sec3'
+
+
+
+
+SEGUNDO PROGRAMA:
+Los displays son más sencillos ya que existe movimiento.
+
+·Mientras los gigglebots se muevan, se muestra una 'M'
+·Cuando llegan a la meta, muestran una 'Cara Feliz'
+·Tras hablar con el árbitro, el gigglebot muestra el mensaje de confirmación que el árbitro ha enviado
+
+
+
+
+
+
+
+
+
+
+
