@@ -1,6 +1,6 @@
 # MICROBIT - Ejercicios de Programación
 
-Colección de ejercicios educativos de programación para la plataforma BBC Micro:bit, desde básico hasta intermedio.
+Colección de ejercicios y proyectos personales de programación para BBC Micro:bit, desde basico a más avanzado.
 
 ## Descripción
 
